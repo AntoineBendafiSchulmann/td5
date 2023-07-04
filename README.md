@@ -1,30 +1,46 @@
-# td5
+## Festival Data Documentation
 
-# affiche une liste de festivals , et les différentes informations dessus comme les coordonnées, le nom, la date, etc...
+# Data Fields
+The API returns the following information for each festival:
 
-# exemple des informations disponibles pour chacuns des festivals
+dept_sk: The department code of the festival's location.
+coordonnees_insee: An array representing geographical coordinates in the INSEE system [Latitude, Longitude].
+date_de_fin_ancien: The end date of the previous festival.
+mois_indicatif_en_chiffre_y_compris_double_mois: The indicative month in figures, including dual-month festivals.
+nom_departement: The name of the department where the festival is held.
+departement: The code of the department where the festival is held.
+periodicite: The periodicity of the festival.
+mois_habituel_de_debut: The usual starting month of the festival.
+code_postal: The postal code of the festival's location.
+complement_domaine: Additional domain of the festival.
+autres_communes: Other communes involved in the festival.
+libelle_commune_pour_calcul_cp_insee: The common label for INSEE CP calculation.
+domaine: The main domain of the festival.
+date_debut_ancien: The start date of the previous festival.
+code_insee: The INSEE code of the festival's location.
+commune_principale: The main commune of the festival.
+region: The region where the festival is held.
+nom_de_la_manifestation: The name of the festival.
+ndeg_identification: The identification number of the festival.
+site_web: The website of the festival.
+date_de_creation: The creation date of the festival.
+check_edition: Check edition status of the festival.
+ndeg_de_l_edition_2018: The number of the 2018 edition.
+ndeg_de_l_edition_2019: The number of the 2019 edition.
+Please refer to this documentation when parsing and using festival data in your applications. For any queries, please contact the data provider.
 
-dept_sk: 62,
-  coordonnees_insee: [ 50.4212424085, 2.71263968704 ],
-  date_de_fin_ancien: '2019-04-06',
-  mois_indicatif_en_chiffre_y_compris_double_mois: 2,
-  nom_departement: 'Pas-de-Calais',
-  departement: '62',
-  periodicite: 'Annuelle',
-  mois_habituel_de_debut: '02 (février)',
-  code_postal: '62160',
-  complement_domaine: 'Chanson',
-  autres_communes: 'Diverses communes du Bassin Minier du Pas de Calais',
-  libelle_commune_pour_calcul_cp_insee: 'AIX NOULETTE',
-  domaine: 'Musiques actuelles',
-  date_debut_ancien: '2019-02-22',
-  code_insee: '62019',
-  commune_principale: 'AIX NOULETTE',
-  region: 'Hauts-de-France',
-  nom_de_la_manifestation: 'LES ENCHANTEURS',
-  ndeg_identification: 'GD005',
-  site_web: 'http://www.festival-lesenchanteurs.com',
-  date_de_creation: '2000-01-01',
-  check_edition: 0,
-  ndeg_de_l_edition_2018: 19,
-  ndeg_de_l_edition_2019: 20
+
+# Usage
+The API fetches data from a public festival dataset and prints out the information about each festival in the console. To run the application:
+  
+  ```bash
+  node index.js 
+  ```
+
+
+# Tests
+To run the tests for this project, execute the following command:
+
+```bash
+npm run test
+```
