@@ -56,3 +56,4 @@ describe('getFestivalData', () => {
     await expect(getFestivalData()).rejects.toThrow('Network error');
   });
 });
+
